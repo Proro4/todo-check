@@ -191,10 +191,10 @@
     @media screen and (max-width: 520px){
       flex-wrap: wrap;
       &>span{
-        display: flex;
         width: 100%;
-        justify-content: space-between;
-
+        &>span{
+          width: 100%;
+        }
       }
     }
   }

@@ -5,7 +5,7 @@
                 add/edit note # {{list.length + 1}}
             </h1>
             <h1 v-else>
-                add/edit note # {{noteCurrentId + 1}}
+                add/edit note # {{parseInt(noteCurrentId) + 1}}
             </h1>
             <div class="note-edit">
                 <div class="note-edit__top">
@@ -63,6 +63,7 @@
                                 :clickButton="addNoteTodo"></tButton>
                         <span>
                             <span
+                                    v-if="!newNote"
                                     class="note-edit__changes"
                                     :class="{'active': changedNote}"
                                     @click="rollBack"
@@ -85,6 +86,7 @@
                                 </svg>
                             </span>
                             <span
+                                    v-if="!newNote"
                                     class="note-edit__changes back"
                                     :class="{'active': rollBackToggle}"
                                     @click="rollforward">
