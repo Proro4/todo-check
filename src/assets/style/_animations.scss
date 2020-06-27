@@ -1,0 +1,42 @@
+// bounce animation begin
+
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+
+
+@keyframes bounce-in {
+  0%   { transform: translate3d(100px,0,0); opacity: 0; }
+  50%  { transform: translate3d(-25px,0,0); opacity: 0.5;}
+  100% { transform: translate3d(0,0,0); opacity: 1; }
+}
+
+@keyframes bounce-out {
+  0%   { transform: translate3d(0px,0,0); opacity: 1; }
+  100% { transform: translate3d(100px,0,0); opacity: 0; }
+}
+// bounce animation end
+
+// bounce animation begin
+.slide-enter-active {
+  animation: slide-in .5s;
+}
+
+.slide-leave-active {
+  animation: slide-out .5s;
+}
+
+@keyframes slide-in {
+  0%   { position: absolute; opacity: 0;}
+  100% {position: relative; opacity: 1; }
+}
+
+@keyframes slide-out {
+  0%   { position: absolute; opacity: 1;}
+  100% {position: absolute; opacity: 0; }
+}
+// bounce animation end
